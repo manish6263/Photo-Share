@@ -12,7 +12,7 @@ export const getPhotosByUserId = async (userId) => {
     return data;
 };
 
-// Get photos by userId.....
+// Get photos by category Id.....
 export const getPhotosByCategoryId = async (categoryId) => {
     const { data } = await axios.get(`/photos/category/${categoryId}`);
     return data;
