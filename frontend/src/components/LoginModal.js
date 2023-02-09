@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Typography, Box, Button, TextField, InputAdornment, InputLabel, FormControl, IconButton, OutlinedInput, FormControlLabel, Checkbox, FormHelperText } from '@mui/material';
+import { Typography, Box, Button, TextField, InputAdornment, InputLabel, FormControl, IconButton, OutlinedInput } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 import { useFormik } from 'formik';
 import { Login } from '../services/AuthServices';
@@ -11,7 +11,7 @@ import { useUserContext } from '../contexts/UserContext';
 const LoginModal = React.forwardRef(({ setOpen, setLoginAlert, setResult }, ref) => {
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
-    const {setUser} = useUserContext();
+    const { setUser } = useUserContext();
 
     const handleClickShowPassword = () => {
         setShowPassword(!showPassword);
